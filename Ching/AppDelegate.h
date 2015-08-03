@@ -6,12 +6,13 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
+@import ChingKit;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, readonly) CHPersistenceController *persistenceController;
 
 @end
 

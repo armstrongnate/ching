@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F6a" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CHEnvelope" representedClassName="CHEnvelope" syncable="YES">
+        <attribute name="budget" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="changedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CHEnvelope" positionX="-63" positionY="-18" width="128" height="120"/>
+    </elements>
+</model>

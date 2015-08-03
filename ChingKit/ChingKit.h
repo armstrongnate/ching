@@ -8,6 +8,11 @@
 
 @import Foundation;
 
+#import "CHInMemoryPersistenceController.h"
+#import "CHPersistenceController.h"
+#import "CHBaseEntity.h"
+#import "CHEnvelope.h"
+
 //! Project version number for ChingKit.
 FOUNDATION_EXPORT double ChingKitVersionNumber;
 
