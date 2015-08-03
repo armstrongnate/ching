@@ -12,7 +12,6 @@
 		4318BE481B6C6D3200BE3B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4318BE461B6C6D3200BE3B31 /* Main.storyboard */; };
 		4318BE4A1B6C6D3200BE3B31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4318BE491B6C6D3200BE3B31 /* Images.xcassets */; };
 		4318BE4D1B6C6D3200BE3B31 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4318BE4B1B6C6D3200BE3B31 /* LaunchScreen.xib */; };
-		4318BE591B6C6D3200BE3B31 /* ChingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4318BE581B6C6D3200BE3B31 /* ChingTests.m */; };
 		4318BE6C1B6C6D8100BE3B31 /* ChingKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 4318BE6B1B6C6D8100BE3B31 /* ChingKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4318BE721B6C6D8100BE3B31 /* ChingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318BE671B6C6D8100BE3B31 /* ChingKit.framework */; };
 		4318BE7E1B6C6D8100BE3B31 /* ChingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318BE671B6C6D8100BE3B31 /* ChingKit.framework */; };
@@ -93,7 +92,6 @@
 		4318BE4C1B6C6D3200BE3B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4318BE521B6C6D3200BE3B31 /* ChingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4318BE571B6C6D3200BE3B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4318BE581B6C6D3200BE3B31 /* ChingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChingTests.m; sourceTree = "<group>"; };
 		4318BE671B6C6D8100BE3B31 /* ChingKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChingKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4318BE6A1B6C6D8100BE3B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4318BE6B1B6C6D8100BE3B31 /* ChingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChingKit.h; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 		4318BE551B6C6D3200BE3B31 /* ChingTests */ = {
 			isa = PBXGroup;
 			children = (
-				4318BE581B6C6D3200BE3B31 /* ChingTests.m */,
 				43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */,
 				4318BE561B6C6D3200BE3B31 /* Supporting Files */,
 			);
@@ -525,7 +522,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4318BE591B6C6D3200BE3B31 /* ChingTests.m in Sources */,
 				43F039AB1B6ED70300936556 /* EnvelopesViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
