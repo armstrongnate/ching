@@ -29,11 +29,14 @@ describe(@"EnvelopesViewController", ^{
 	__block EnvelopesViewController *_vc;
 	beforeEach(^{
 		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-		UINavigationController *nav = [storyboard instantiateInitialViewController];
+		UISplitViewController *splitVC = [storyboard instantiateInitialViewController];
+    	UINavigationController *nav = [[splitVC viewControllers] firstObject];
 		_vc = (EnvelopesViewController *)[nav visibleViewController];
 		_vc.context = context;
 
 		expect(_vc.view).toNot.beNil();
+		expect(_vc).to.beInstanceOf([EnvelopesViewController class]);
+		expect(splitVC).to.beInstanceOf([UISplitViewController class]);
 	});
 
 	it(@"should be instantiated from the storyboard", ^{

@@ -10,7 +10,19 @@
 
 #import "EnvelopesViewController.h"
 
+@interface EnvelopesViewController ()
+{
+	bool collapseDetailViewController;
+}
+
+@end
+
 @implementation EnvelopesViewController
+
+- (void)viewDidLoad {
+	collapseDetailViewController = true;
+	self.splitViewController.delegate = self;
+}
 
 - (void)setContext:(NSManagedObjectContext *)context
 {
@@ -38,6 +50,21 @@
 	CHEnvelope *envelope = [self.fetchedResultsController objectAtIndexPath:indexPath];
 	cell.textLabel.text = envelope.name;
 	return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	collapseDetailViewController = false;
+}
+
+#pragma mark - UISplitViewControllerDelegate
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController
+collapseSecondaryViewController:(UIViewController *)secondaryViewController
+  ontoPrimaryViewController:(UIViewController *)primaryViewController
+{
+	return collapseDetailViewController;
 }
 
 @end

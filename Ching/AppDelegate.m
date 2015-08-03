@@ -55,8 +55,9 @@
 
 - (void)completeUserInterface
 {
-	UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
-	EnvelopesViewController *vc = (EnvelopesViewController *)[nav visibleViewController];
+	UISplitViewController *splitVC = (UISplitViewController *)self.window.rootViewController;
+	UINavigationController *nav = [[splitVC viewControllers] firstObject];
+	EnvelopesViewController *vc = (EnvelopesViewController *)[nav topViewController];
 	vc.context = self.persistenceController.managedObjectContext;
 }
 

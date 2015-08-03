@@ -11,7 +11,7 @@
 
 #import "CoreDataTableViewController.h"
 
-@interface EnvelopesViewController : CoreDataTableViewController
+@interface EnvelopesViewController : CoreDataTableViewController<UISplitViewControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
 
