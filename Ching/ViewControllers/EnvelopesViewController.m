@@ -23,7 +23,9 @@
 																   selector:@selector(localizedCaseInsensitiveCompare:)]];
 		request.predicate = nil; // all envelopes
 		self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
-	} else {
+	}
+	else
+	{
 		self.fetchedResultsController = nil;
 	}
 }
