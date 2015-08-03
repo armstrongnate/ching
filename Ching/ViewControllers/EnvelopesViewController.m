@@ -30,7 +30,7 @@
 	}
 }
 
-#pragma mark - table view data source
+#pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
