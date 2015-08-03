@@ -224,12 +224,9 @@
 		4318BE681B6C6D8100BE3B31 /* ChingKit */ = {
 			isa = PBXGroup;
 			children = (
-				4393E1B81B6FC276002AADB3 /* Models */,
 				4318BE6B1B6C6D8100BE3B31 /* ChingKit.h */,
-				4393E1AA1B6EEB22002AADB3 /* CHInMemoryPersistenceController.h */,
-				4393E1AB1B6EEB22002AADB3 /* CHInMemoryPersistenceController.m */,
-				4393E1A61B6EEA70002AADB3 /* CHPersistenceController.h */,
-				4393E1A71B6EEA70002AADB3 /* CHPersistenceController.m */,
+				4393E1B81B6FC276002AADB3 /* Models */,
+				43A057841B70121D00BC03E7 /* Persistence */,
 				4318BE691B6C6D8100BE3B31 /* Supporting Files */,
 				4393E1AF1B6FC1CF002AADB3 /* DataModel.xcdatamodeld */,
 			);
@@ -270,6 +267,17 @@
 				4393E1C61B6FC735002AADB3 /* CHEnvelope.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		43A057841B70121D00BC03E7 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				4393E1AA1B6EEB22002AADB3 /* CHInMemoryPersistenceController.h */,
+				4393E1AB1B6EEB22002AADB3 /* CHInMemoryPersistenceController.m */,
+				4393E1A61B6EEA70002AADB3 /* CHPersistenceController.h */,
+				4393E1A71B6EEA70002AADB3 /* CHPersistenceController.m */,
+			);
+			name = Persistence;
 			sourceTree = "<group>";
 		};
 		43BB0C541B6EA65F00270058 /* Frameworks */ = {
