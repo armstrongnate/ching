@@ -23,4 +23,9 @@
 	return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:context];
 }
 
+- (void)setBudgetWithDouble:(double)budget
+{
+	self.budget = [[NSDecimalNumber alloc] initWithDouble:budget];
+}
+
 @end

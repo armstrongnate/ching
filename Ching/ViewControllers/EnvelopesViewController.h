@@ -14,5 +14,8 @@
 @interface EnvelopesViewController : CoreDataTableViewController<UISplitViewControllerDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, strong) IBOutlet UIBarButtonItem *addButton;
+
+- (IBAction)addEnvelopeButtonTapped:(id)sender;
 
 @end

@@ -46,6 +46,12 @@ describe(@"CHEnvelope", ^{
 		[context save:&error];
 		expect(error).to.beNil();
 	});
+
+	it(@"can conveniently set budget with double", ^{
+		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:context];
+		[envelope setBudgetWithDouble:100.0];
+		expect(envelope.budget).to.equal(100);
+	});
 });
 
 SpecEnd

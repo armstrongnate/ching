@@ -13,10 +13,12 @@
 
 @interface CHEnvelope : CHBaseEntity
 
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSDecimalNumber *budget;
+
 + (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
 + (NSString *)entityName;
 
-@property (nonatomic, retain) NSString *name;
-@property (nonatomic, retain) NSDecimalNumber *budget;
+- (void)setBudgetWithDouble:(double)budget;
 
 @end

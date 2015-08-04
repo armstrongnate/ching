@@ -9,6 +9,7 @@
 @import ChingKit;
 
 #import "EnvelopesViewController.h"
+#import "EnvelopeViewController.h"
 
 @interface EnvelopesViewController ()
 {
@@ -19,7 +20,8 @@
 
 @implementation EnvelopesViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
 	collapseDetailViewController = true;
 	self.splitViewController.delegate = self;
 }
@@ -34,11 +36,39 @@
 																  ascending:YES
 																   selector:@selector(localizedCaseInsensitiveCompare:)]];
 		request.predicate = nil; // all envelopes
-		self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:context sectionNameKeyPath:nil cacheName:nil];
+		self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+																			managedObjectContext:context
+																			  sectionNameKeyPath:nil
+																					   cacheName:nil];
 	}
 	else
 	{
 		self.fetchedResultsController = nil;
+	}
+}
+
+- (IBAction)addEnvelopeButtonTapped:(id)sender
+{
+	[self performSegueWithIdentifier:@"newEnvelope" sender:sender];
+}
+
+- (IBAction)unwindFromEnvelopeForm:(UIStoryboardSegue *)segue
+{
+	// noop
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([segue.identifier isEqualToString:@"newEnvelope"])
+	{
+		NSManagedObjectContext *childContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+		childContext.parentContext = self.context;
+		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:childContext];
+		envelope.name = @"Groceries";
+		[envelope setBudgetWithDouble:100.0];
+		EnvelopeViewController *envelopeViewController = (EnvelopeViewController *)[segue.destinationViewController topViewController];
+		envelopeViewController.envelope = envelope;
+		envelopeViewController.context = childContext;
 	}
 }
 
@@ -54,7 +84,8 @@
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 	collapseDetailViewController = false;
 }
 

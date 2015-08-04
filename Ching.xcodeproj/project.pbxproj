@@ -16,6 +16,7 @@
 		4318BE721B6C6D8100BE3B31 /* ChingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318BE671B6C6D8100BE3B31 /* ChingKit.framework */; };
 		4318BE7E1B6C6D8100BE3B31 /* ChingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318BE671B6C6D8100BE3B31 /* ChingKit.framework */; };
 		4318BE7F1B6C6D8100BE3B31 /* ChingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4318BE671B6C6D8100BE3B31 /* ChingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4326C0E61B711A38008BB699 /* SpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326C0E51B711A38008BB699 /* SpecHelper.m */; };
 		434A77701B6D2A6E00E20313 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		434A77711B6D2A6E00E20313 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
 		4393E19E1B6EDCF2002AADB3 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
@@ -32,6 +33,11 @@
 		4393E1C71B6FC735002AADB3 /* CHEnvelope.h in Headers */ = {isa = PBXBuildFile; fileRef = 4393E1C51B6FC735002AADB3 /* CHEnvelope.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4393E1C81B6FC735002AADB3 /* CHEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = 4393E1C61B6FC735002AADB3 /* CHEnvelope.m */; };
 		43A057831B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */; };
+		43CDAB691B7061A900E72E11 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CDAB5E1B7061A900E72E11 /* libOCMock.a */; };
+		43CDAB6A1B7061A900E72E11 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CDAB5E1B7061A900E72E11 /* libOCMock.a */; };
+		43CDAB6E1B706D1800E72E11 /* SingleInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDAB6D1B706D1800E72E11 /* SingleInputTableViewCell.m */; };
+		43CDAB711B71105B00E72E11 /* EnvelopeViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDAB701B71105B00E72E11 /* EnvelopeViewControllerSpec.m */; };
+		43CDAB741B7110B900E72E11 /* EnvelopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDAB731B7110B900E72E11 /* EnvelopeViewController.m */; };
 		43F039AB1B6ED70300936556 /* EnvelopesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */; };
 		43F039AE1B6ED88700936556 /* EnvelopesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F039AD1B6ED88700936556 /* EnvelopesViewController.m */; };
 /* End PBXBuildFile section */
@@ -97,6 +103,8 @@
 		4318BE6B1B6C6D8100BE3B31 /* ChingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChingKit.h; sourceTree = "<group>"; };
 		4318BE711B6C6D8100BE3B31 /* ChingKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChingKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4318BE791B6C6D8100BE3B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4326C0E41B711A38008BB699 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
+		4326C0E51B711A38008BB699 /* SpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecHelper.m; sourceTree = "<group>"; };
 		434A77661B6D279000E20313 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		434A776B1B6D293D00E20313 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		4393E1A11B6EDF2B002AADB3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ViewControllers/CoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -111,6 +119,21 @@
 		4393E1C51B6FC735002AADB3 /* CHEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHEnvelope.h; path = Models/CHEnvelope.h; sourceTree = "<group>"; };
 		4393E1C61B6FC735002AADB3 /* CHEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHEnvelope.m; path = Models/CHEnvelope.m; sourceTree = "<group>"; };
 		43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEnvelopeSpecs.m; sourceTree = "<group>"; };
+		43CDAB5E1B7061A900E72E11 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Vendor/OCMock/libOCMock.a; sourceTree = "<group>"; };
+		43CDAB601B7061A900E72E11 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		43CDAB611B7061A900E72E11 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		43CDAB621B7061A900E72E11 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		43CDAB631B7061A900E72E11 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		43CDAB641B7061A900E72E11 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		43CDAB651B7061A900E72E11 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		43CDAB661B7061A900E72E11 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		43CDAB671B7061A900E72E11 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		43CDAB681B7061A900E72E11 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		43CDAB6C1B706D1800E72E11 /* SingleInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleInputTableViewCell.h; path = Views/SingleInputTableViewCell.h; sourceTree = "<group>"; };
+		43CDAB6D1B706D1800E72E11 /* SingleInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleInputTableViewCell.m; path = Views/SingleInputTableViewCell.m; sourceTree = "<group>"; };
+		43CDAB701B71105B00E72E11 /* EnvelopeViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvelopeViewControllerSpec.m; sourceTree = "<group>"; };
+		43CDAB721B7110B900E72E11 /* EnvelopeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnvelopeViewController.h; path = ViewControllers/EnvelopeViewController.h; sourceTree = "<group>"; };
+		43CDAB731B7110B900E72E11 /* EnvelopeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnvelopeViewController.m; path = ViewControllers/EnvelopeViewController.m; sourceTree = "<group>"; };
 		43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvelopesViewControllerSpec.m; sourceTree = "<group>"; };
 		43F039AC1B6ED88700936556 /* EnvelopesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnvelopesViewController.h; path = ViewControllers/EnvelopesViewController.h; sourceTree = "<group>"; };
 		43F039AD1B6ED88700936556 /* EnvelopesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnvelopesViewController.m; path = ViewControllers/EnvelopesViewController.m; sourceTree = "<group>"; };
@@ -130,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4393E1AE1B6F1EA0002AADB3 /* ChingKit.framework in Frameworks */,
+				43CDAB691B7061A900E72E11 /* libOCMock.a in Frameworks */,
 				4393E19E1B6EDCF2002AADB3 /* Expecta.framework in Frameworks */,
 				4393E19F1B6EDCF2002AADB3 /* Specta.framework in Frameworks */,
 			);
@@ -147,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4318BE721B6C6D8100BE3B31 /* ChingKit.framework in Frameworks */,
+				43CDAB6A1B7061A900E72E11 /* libOCMock.a in Frameworks */,
 				434A77701B6D2A6E00E20313 /* Expecta.framework in Frameworks */,
 				434A77711B6D2A6E00E20313 /* Specta.framework in Frameworks */,
 			);
@@ -163,6 +188,7 @@
 				4318BE681B6C6D8100BE3B31 /* ChingKit */,
 				4318BE771B6C6D8100BE3B31 /* ChingKitTests */,
 				43BB0C541B6EA65F00270058 /* Frameworks */,
+				43CDAB5D1B70618C00E72E11 /* Vendor */,
 				4318BE3A1B6C6D3200BE3B31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -181,6 +207,7 @@
 		4318BE3B1B6C6D3200BE3B31 /* Ching */ = {
 			isa = PBXGroup;
 			children = (
+				43CDAB6B1B706CC800E72E11 /* Views */,
 				43F039A91B6ED3D600936556 /* View Controllers */,
 				4318BE401B6C6D3200BE3B31 /* AppDelegate.h */,
 				4318BE411B6C6D3200BE3B31 /* AppDelegate.m */,
@@ -206,6 +233,9 @@
 			children = (
 				43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */,
 				4318BE561B6C6D3200BE3B31 /* Supporting Files */,
+				43CDAB701B71105B00E72E11 /* EnvelopeViewControllerSpec.m */,
+				4326C0E41B711A38008BB699 /* SpecHelper.h */,
+				4326C0E51B711A38008BB699 /* SpecHelper.m */,
 			);
 			path = ChingTests;
 			sourceTree = "<group>";
@@ -286,6 +316,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		43CDAB5D1B70618C00E72E11 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				43CDAB5E1B7061A900E72E11 /* libOCMock.a */,
+				43CDAB5F1B7061A900E72E11 /* OCMock */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		43CDAB5F1B7061A900E72E11 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				43CDAB601B7061A900E72E11 /* NSNotificationCenter+OCMAdditions.h */,
+				43CDAB611B7061A900E72E11 /* OCMArg.h */,
+				43CDAB621B7061A900E72E11 /* OCMConstraint.h */,
+				43CDAB631B7061A900E72E11 /* OCMLocation.h */,
+				43CDAB641B7061A900E72E11 /* OCMMacroState.h */,
+				43CDAB651B7061A900E72E11 /* OCMock.h */,
+				43CDAB661B7061A900E72E11 /* OCMockObject.h */,
+				43CDAB671B7061A900E72E11 /* OCMRecorder.h */,
+				43CDAB681B7061A900E72E11 /* OCMStubRecorder.h */,
+			);
+			name = OCMock;
+			path = Vendor/OCMock/OCMock;
+			sourceTree = "<group>";
+		};
+		43CDAB6B1B706CC800E72E11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				43CDAB6C1B706D1800E72E11 /* SingleInputTableViewCell.h */,
+				43CDAB6D1B706D1800E72E11 /* SingleInputTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		43F039A91B6ED3D600936556 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +358,8 @@
 				4393E1A21B6EDF2B002AADB3 /* CoreDataTableViewController.m */,
 				43F039AC1B6ED88700936556 /* EnvelopesViewController.h */,
 				43F039AD1B6ED88700936556 /* EnvelopesViewController.m */,
+				43CDAB721B7110B900E72E11 /* EnvelopeViewController.h */,
+				43CDAB731B7110B900E72E11 /* EnvelopeViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -512,8 +579,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F039AE1B6ED88700936556 /* EnvelopesViewController.m in Sources */,
+				43CDAB6E1B706D1800E72E11 /* SingleInputTableViewCell.m in Sources */,
 				4318BE421B6C6D3200BE3B31 /* AppDelegate.m in Sources */,
 				4393E1A31B6EDF2B002AADB3 /* CoreDataTableViewController.m in Sources */,
+				43CDAB741B7110B900E72E11 /* EnvelopeViewController.m in Sources */,
 				4318BE3F1B6C6D3200BE3B31 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -523,6 +592,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F039AB1B6ED70300936556 /* EnvelopesViewControllerSpec.m in Sources */,
+				43CDAB711B71105B00E72E11 /* EnvelopeViewControllerSpec.m in Sources */,
+				4326C0E61B711A38008BB699 /* SpecHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,13 +780,30 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/Vendor/OCMock/",
+				);
 				INFOPLIST_FILE = ChingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Vendor/OCMock",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ching.app/Ching";
 			};
@@ -729,9 +817,26 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/Vendor/OCMock/",
 				);
 				INFOPLIST_FILE = ChingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Vendor/OCMock",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ching.app/Ching";
 			};
@@ -787,13 +892,30 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/Vendor/OCMock/",
+				);
 				INFOPLIST_FILE = ChingKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Vendor/OCMock",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ching.app/Ching";
 			};
@@ -806,9 +928,26 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/Vendor/OCMock/",
 				);
 				INFOPLIST_FILE = ChingKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Vendor/OCMock",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ching.app/Ching";
 			};

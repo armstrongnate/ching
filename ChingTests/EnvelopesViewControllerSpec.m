@@ -10,6 +10,7 @@
 @import Specta;
 @import Expecta;
 @import ChingKit;
+#import "OCMock.h"
 
 #import "EnvelopesViewController.h"
 
@@ -52,6 +53,23 @@ describe(@"EnvelopesViewController", ^{
 		UITableViewCell *cell = [_vc.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
 		expect(cell.textLabel.text).to.equal(@"Groceries");
 	});
+
+	it(@"should have an add button", ^{
+		expect(_vc.addButton).toNot.beNil();
+	});
+
+	it(@"should wire up add button action", ^{
+		UIBarButtonItem *button = _vc.addButton;
+		expect(NSStringFromSelector(button.action)).to.equal(@"addEnvelopeButtonTapped:");
+	});
+
+	it(@"should perform segue when add button tapped", ^{
+		id envelopesMock = [OCMockObject partialMockForObject:_vc];
+		[[envelopesMock expect] performSegueWithIdentifier:@"newEnvelope" sender:_vc.addButton];
+		[_vc addEnvelopeButtonTapped:_vc.addButton];
+		[envelopesMock verify];
+	});
+
 });
 
 SpecEnd
