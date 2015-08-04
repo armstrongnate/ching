@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
+@import ChingKit;
+
 #import "AppDelegate.h"
 #import "EnvelopesViewController.h"
 
@@ -14,6 +16,7 @@
 @property (strong, readwrite) CHPersistenceController *persistenceController;
 
 - (void)completeUserInterface;
+- (void)setNavigationBarColors;
 
 @end
 
@@ -22,6 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	[self setNavigationBarColors];
 	self.persistenceController = [[CHPersistenceController alloc] initWithCallback:^{
 		[self completeUserInterface];
 	}];
@@ -59,6 +63,14 @@
 	UINavigationController *nav = [[splitVC viewControllers] firstObject];
 	EnvelopesViewController *vc = (EnvelopesViewController *)[nav topViewController];
 	vc.context = self.persistenceController.managedObjectContext;
+}
+
+- (void)setNavigationBarColors
+{
+	UINavigationBar *appearance = [UINavigationBar appearance];
+	appearance.barTintColor = [UIColor primaryColor];
+	appearance.tintColor = [UIColor whiteColor];
+	appearance.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };
 }
 
 @end

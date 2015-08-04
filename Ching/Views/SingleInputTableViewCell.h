@@ -11,7 +11,7 @@
 @interface SingleInputTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UITextField *textField;
-@property (nonatomic) IBInspectable double dx;
+@property (nonatomic, strong) IBInspectable NSString *label;
 @property (nonatomic, strong) IBInspectable NSString *placeholder;
 
 @end

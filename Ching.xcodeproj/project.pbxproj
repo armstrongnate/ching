@@ -17,6 +17,8 @@
 		4318BE7E1B6C6D8100BE3B31 /* ChingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4318BE671B6C6D8100BE3B31 /* ChingKit.framework */; };
 		4318BE7F1B6C6D8100BE3B31 /* ChingKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4318BE671B6C6D8100BE3B31 /* ChingKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4326C0E61B711A38008BB699 /* SpecHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326C0E51B711A38008BB699 /* SpecHelper.m */; };
+		4326C0EE1B715CB9008BB699 /* UIColor+Colors.h in Headers */ = {isa = PBXBuildFile; fileRef = 4326C0EC1B715CB9008BB699 /* UIColor+Colors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4326C0EF1B715CB9008BB699 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */; };
 		434A77701B6D2A6E00E20313 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		434A77711B6D2A6E00E20313 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
 		4393E19E1B6EDCF2002AADB3 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
@@ -105,6 +107,8 @@
 		4318BE791B6C6D8100BE3B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4326C0E41B711A38008BB699 /* SpecHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 		4326C0E51B711A38008BB699 /* SpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecHelper.m; sourceTree = "<group>"; };
+		4326C0EC1B715CB9008BB699 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Colors.h"; path = "Helpers/UIColor+Colors.h"; sourceTree = "<group>"; };
+		4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "Helpers/UIColor+Colors.m"; sourceTree = "<group>"; };
 		434A77661B6D279000E20313 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		434A776B1B6D293D00E20313 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		4393E1A11B6EDF2B002AADB3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ViewControllers/CoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -232,8 +236,8 @@
 			isa = PBXGroup;
 			children = (
 				43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */,
-				4318BE561B6C6D3200BE3B31 /* Supporting Files */,
 				43CDAB701B71105B00E72E11 /* EnvelopeViewControllerSpec.m */,
+				4318BE561B6C6D3200BE3B31 /* Supporting Files */,
 				4326C0E41B711A38008BB699 /* SpecHelper.h */,
 				4326C0E51B711A38008BB699 /* SpecHelper.m */,
 			);
@@ -254,6 +258,7 @@
 				4318BE6B1B6C6D8100BE3B31 /* ChingKit.h */,
 				4393E1B81B6FC276002AADB3 /* Models */,
 				43A057841B70121D00BC03E7 /* Persistence */,
+				4326C0EB1B715C57008BB699 /* Helpers */,
 				4318BE691B6C6D8100BE3B31 /* Supporting Files */,
 				4393E1AF1B6FC1CF002AADB3 /* DataModel.xcdatamodeld */,
 			);
@@ -283,6 +288,15 @@
 				4318BE791B6C6D8100BE3B31 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4326C0EB1B715C57008BB699 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4326C0EC1B715CB9008BB699 /* UIColor+Colors.h */,
+				4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		4393E1B81B6FC276002AADB3 /* Models */ = {
@@ -371,6 +385,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4326C0EE1B715CB9008BB699 /* UIColor+Colors.h in Headers */,
 				4393E1A81B6EEA70002AADB3 /* CHPersistenceController.h in Headers */,
 				4393E1BB1B6FC68E002AADB3 /* CHBaseEntity.h in Headers */,
 				4393E1AC1B6EEB22002AADB3 /* CHInMemoryPersistenceController.h in Headers */,
@@ -602,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4393E1BC1B6FC68E002AADB3 /* CHBaseEntity.m in Sources */,
+				4326C0EF1B715CB9008BB699 /* UIColor+Colors.m in Sources */,
 				4393E1AD1B6EEB22002AADB3 /* CHInMemoryPersistenceController.m in Sources */,
 				4393E1A91B6EEA70002AADB3 /* CHPersistenceController.m in Sources */,
 				4393E1B11B6FC1CF002AADB3 /* DataModel.xcdatamodeld in Sources */,

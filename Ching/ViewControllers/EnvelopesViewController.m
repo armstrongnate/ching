@@ -64,11 +64,10 @@
 		NSManagedObjectContext *childContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
 		childContext.parentContext = self.context;
 		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:childContext];
-		envelope.name = @"Groceries";
-		[envelope setBudgetWithDouble:100.0];
 		EnvelopeViewController *envelopeViewController = (EnvelopeViewController *)[segue.destinationViewController topViewController];
 		envelopeViewController.envelope = envelope;
 		envelopeViewController.context = childContext;
+		envelopeViewController.title = @"New Envelope";
 	}
 }
 

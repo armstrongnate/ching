@@ -15,14 +15,23 @@
 
 @implementation EnvelopeViewController
 
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+	self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
+	[[self nameCell].textField becomeFirstResponder];
 }
 
 - (void)setEnvelope:(CHEnvelope *)envelope
 {
 	_envelope = envelope;
+	[self nameCell].textField.text = [self.envelope name];
+	[self budgetCell].textField.text = [NSNumberFormatter localizedStringFromNumber:[self.envelope budget] numberStyle:NSNumberFormatterDecimalStyle];
 }
 
 - (SingleInputTableViewCell *)nameCell
@@ -34,28 +43,5 @@
 {
 	return (SingleInputTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
 }
-
-#pragma mark - UITableViewDataSource
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	SingleInputTableViewCell *cell = (SingleInputTableViewCell *)[super tableView:tableView cellForRowAtIndexPath:indexPath];
-	if (self.envelope)
-	{
-    	switch (indexPath.row)
-		{
-    		case 0:
-    			cell.textField.text = [self.envelope name];
-    			break;
-    		case 1:
-            	cell.textField.text = [NSNumberFormatter localizedStringFromNumber:[self.envelope budget] numberStyle:NSNumberFormatterDecimalStyle];
-
-    		default:
-    			break;
-    	}
-	}
-	return cell;
-}
-
 
 @end

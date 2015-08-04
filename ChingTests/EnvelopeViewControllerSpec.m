@@ -40,12 +40,12 @@ describe(@"EnvelopeViewController", ^{
 
 	it(@"should have a name field", ^{
 		expect([_vc nameCell]).to.beInstanceOf([SingleInputTableViewCell class]);
-		expect([_vc nameCell].placeholder).to.equal(@"Name");
+		expect([_vc nameCell].placeholder).to.equal(@"Groceries");
 	});
 
 	it(@"should have a budget field", ^{
 		expect([_vc budgetCell]).to.beInstanceOf([SingleInputTableViewCell class]);
-		expect([_vc budgetCell].placeholder).to.equal(@"Budget");
+		expect([_vc budgetCell].placeholder).to.equal(@"100.00");
 	});
 
 	it(@"should set name value given an envelope", ^{

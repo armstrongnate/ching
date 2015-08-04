@@ -13,6 +13,7 @@
 #import "OCMock.h"
 
 #import "EnvelopesViewController.h"
+#import "EnvelopeViewController.h"
 
 SpecBegin(EnvelopesViewControllerSpec)
 
@@ -68,6 +69,18 @@ describe(@"EnvelopesViewController", ^{
 		[[envelopesMock expect] performSegueWithIdentifier:@"newEnvelope" sender:_vc.addButton];
 		[_vc addEnvelopeButtonTapped:_vc.addButton];
 		[envelopesMock verify];
+	});
+
+	it(@"should prepare for new envelope segue", ^{
+		EnvelopeViewController *evc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"EnvelopeViewController"];
+		UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:evc];
+		UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"newEnvelope" source:_vc destination:nav];
+		[_vc prepareForSegue:segue sender:_vc.addButton];
+		expect(evc.context).notTo.beNil();
+		expect(evc.title).to.equal(@"New Envelope");
+		expect(evc.envelope).notTo.beNil();
+		expect(evc.envelope.name).to.beNil();
+		expect(evc.envelope.budget).to.equal(0);
 	});
 
 });

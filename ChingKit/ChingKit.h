@@ -12,6 +12,7 @@
 #import "CHPersistenceController.h"
 #import "CHBaseEntity.h"
 #import "CHEnvelope.h"
+#import "UIColor+Colors.h"
 
 //! Project version number for ChingKit.
 FOUNDATION_EXPORT double ChingKitVersionNumber;
