@@ -31,11 +31,33 @@ describe(@"CHNumberTextFieldDelegate", ^{
 		[delegateMock verify];
 	});
 
-	it(@"strips non numeric characters", ^{
-		_textField.text = @"a";
+	it(@"makes sure text is a number", ^{
+		_textField.text = @"abc123";
 		expect(_textField.text).to.equal(@"");
-		_textField.text = @"abc123def.g h45ij";
-		expect(_textField.text).to.equal(@"123.45");
+
+		_textField.text = @"192.168.1.1";
+		expect(_textField.text).to.equal(@"192.168");
+
+		_textField.text = @"192.168.";
+		expect(_textField.text).to.equal(@"192.168");
+
+		_textField.text = @"100abc.123";
+		expect(_textField.text).to.equal(@"100.123");
+
+		_textField.text = @"100.01abc.123";
+		expect(_textField.text).to.equal(@"100.01");
+
+		_textField.text = @"100.";
+		expect(_textField.text).to.equal(@"100.");
+
+		_textField.text = @"100.0";
+		expect(_textField.text).to.equal(@"100.0");
+
+		_textField.text = @"100.010";
+		expect(_textField.text).to.equal(@"100.01");
+
+		_textField.text = @"100.000";
+		expect(_textField.text).to.equal(@"100.0");
 	});
 });
 

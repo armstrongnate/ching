@@ -114,6 +114,7 @@
 		4326C0E51B711A38008BB699 /* SpecHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecHelper.m; sourceTree = "<group>"; };
 		4326C0EC1B715CB9008BB699 /* UIColor+Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Colors.h"; path = "Helpers/UIColor+Colors.h"; sourceTree = "<group>"; };
 		4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "Helpers/UIColor+Colors.m"; sourceTree = "<group>"; };
+		432A33F21B72621D00FE4B1A /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		434A77661B6D279000E20313 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		434A776B1B6D293D00E20313 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		4358DA1A1B719714007C6A65 /* BudgetInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BudgetInputTableViewCell.h; path = Views/BudgetInputTableViewCell.h; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 				4318BE491B6C6D3200BE3B31 /* Images.xcassets */,
 				4318BE4B1B6C6D3200BE3B31 /* LaunchScreen.xib */,
 				4318BE3C1B6C6D3200BE3B31 /* Supporting Files */,
+				432A33F21B72621D00FE4B1A /* Playground.playground */,
 			);
 			path = Ching;
 			sourceTree = "<group>";
