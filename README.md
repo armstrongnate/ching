@@ -33,3 +33,7 @@ to extend the functionality of the classes. The article linked above puts it nic
 > You may wonder how to implement custom code in managed object subclasses if Xcode keeps overwriting these files when regenerating them. Well, the answer is pretty simple: don’t generate them with Xcode. If you think about it, the generated code in these classes is trivial and very easy to write yourself, or generate once and then keep up to date manually. It’s really just a bunch of property declarations.
 >
 > There are other solutions like putting the custom code in a category, or using tools like mogenerator, which creates a base class for each entity and a subclass of it where the user-written code is supposed to go. But none of these solutions allow for a flexible class hierarchy independent of the entity hierarchy. So at the cost of writing a few lines of trivial code, our advice is to just write those classes manually.
+
+In order to test methods on the `BaseEntity` class I added it as an entity to the
+xcdatamodel which is kind of smelly because I should never insert `BaseEntity`
+objects into the database but I needed a way to unit test the base class.
