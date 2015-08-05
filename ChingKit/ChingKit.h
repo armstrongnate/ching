@@ -13,6 +13,7 @@
 #import "CHBaseEntity.h"
 #import "CHEnvelope.h"
 #import "UIColor+Colors.h"
+#import "CHNumberTextFieldDelegate.h"
 
 //! Project version number for ChingKit.
 FOUNDATION_EXPORT double ChingKitVersionNumber;

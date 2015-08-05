@@ -49,6 +49,11 @@ describe(@"EnvelopeViewController", ^{
 		expect([_vc budgetCell].placeholder).to.equal(@"100.00");
 	});
 
+	it(@"should only allow numbers in budget field", ^{
+		[_vc budgetCell].textField.text = @"hello";
+		expect([_vc budgetCell].textField.text).to.equal(@"");
+	});
+
 	it(@"should set name value given an envelope", ^{
 		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:_specHelper.persistenceController.managedObjectContext];
 		envelope.name = @"Groceries";

@@ -37,6 +37,9 @@
 		4393E1C71B6FC735002AADB3 /* CHEnvelope.h in Headers */ = {isa = PBXBuildFile; fileRef = 4393E1C51B6FC735002AADB3 /* CHEnvelope.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4393E1C81B6FC735002AADB3 /* CHEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = 4393E1C61B6FC735002AADB3 /* CHEnvelope.m */; };
 		43A057831B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */; };
+		43B996531B71BBB1003363E9 /* CHNumberTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegate.m */; };
+		43B996561B71BCD8003363E9 /* CHNumberTextFieldDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 43B996541B71BCD8003363E9 /* CHNumberTextFieldDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43B996571B71BCD8003363E9 /* CHNumberTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B996551B71BCD8003363E9 /* CHNumberTextFieldDelegate.m */; };
 		43CDAB691B7061A900E72E11 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CDAB5E1B7061A900E72E11 /* libOCMock.a */; };
 		43CDAB6A1B7061A900E72E11 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CDAB5E1B7061A900E72E11 /* libOCMock.a */; };
 		43CDAB6E1B706D1800E72E11 /* SingleInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDAB6D1B706D1800E72E11 /* SingleInputTableViewCell.m */; };
@@ -128,6 +131,9 @@
 		4393E1C51B6FC735002AADB3 /* CHEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHEnvelope.h; path = Models/CHEnvelope.h; sourceTree = "<group>"; };
 		4393E1C61B6FC735002AADB3 /* CHEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHEnvelope.m; path = Models/CHEnvelope.m; sourceTree = "<group>"; };
 		43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEnvelopeSpecs.m; sourceTree = "<group>"; };
+		43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNumberTextFieldDelegate.m; sourceTree = "<group>"; };
+		43B996541B71BCD8003363E9 /* CHNumberTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHNumberTextFieldDelegate.h; path = Helpers/CHNumberTextFieldDelegate.h; sourceTree = "<group>"; };
+		43B996551B71BCD8003363E9 /* CHNumberTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHNumberTextFieldDelegate.m; path = Helpers/CHNumberTextFieldDelegate.m; sourceTree = "<group>"; };
 		43CDAB5E1B7061A900E72E11 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Vendor/OCMock/libOCMock.a; sourceTree = "<group>"; };
 		43CDAB601B7061A900E72E11 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
 		43CDAB611B7061A900E72E11 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
@@ -242,9 +248,10 @@
 			children = (
 				43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */,
 				43CDAB701B71105B00E72E11 /* EnvelopeViewControllerSpec.m */,
-				4318BE561B6C6D3200BE3B31 /* Supporting Files */,
 				4326C0E41B711A38008BB699 /* SpecHelper.h */,
 				4326C0E51B711A38008BB699 /* SpecHelper.m */,
+				43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegate.m */,
+				4318BE561B6C6D3200BE3B31 /* Supporting Files */,
 			);
 			path = ChingTests;
 			sourceTree = "<group>";
@@ -301,6 +308,8 @@
 			children = (
 				4326C0EC1B715CB9008BB699 /* UIColor+Colors.h */,
 				4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */,
+				43B996541B71BCD8003363E9 /* CHNumberTextFieldDelegate.h */,
+				43B996551B71BCD8003363E9 /* CHNumberTextFieldDelegate.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -397,6 +406,7 @@
 				4393E1A81B6EEA70002AADB3 /* CHPersistenceController.h in Headers */,
 				4393E1BB1B6FC68E002AADB3 /* CHBaseEntity.h in Headers */,
 				4393E1AC1B6EEB22002AADB3 /* CHInMemoryPersistenceController.h in Headers */,
+				43B996561B71BCD8003363E9 /* CHNumberTextFieldDelegate.h in Headers */,
 				4318BE6C1B6C6D8100BE3B31 /* ChingKit.h in Headers */,
 				4393E1C71B6FC735002AADB3 /* CHEnvelope.h in Headers */,
 			);
@@ -616,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F039AB1B6ED70300936556 /* EnvelopesViewControllerSpec.m in Sources */,
+				43B996531B71BBB1003363E9 /* CHNumberTextFieldDelegate.m in Sources */,
 				43CDAB711B71105B00E72E11 /* EnvelopeViewControllerSpec.m in Sources */,
 				4326C0E61B711A38008BB699 /* SpecHelper.m in Sources */,
 			);
@@ -625,6 +636,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43B996571B71BCD8003363E9 /* CHNumberTextFieldDelegate.m in Sources */,
 				4393E1BC1B6FC68E002AADB3 /* CHBaseEntity.m in Sources */,
 				4326C0EF1B715CB9008BB699 /* UIColor+Colors.m in Sources */,
 				4393E1AD1B6EEB22002AADB3 /* CHInMemoryPersistenceController.m in Sources */,
