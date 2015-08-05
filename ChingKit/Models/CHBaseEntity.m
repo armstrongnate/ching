@@ -12,6 +12,5 @@
 
 @dynamic changedAt;
 @dynamic createdAt;
-@dynamic identifier;
 
 @end

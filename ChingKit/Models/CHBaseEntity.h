@@ -11,7 +11,6 @@
 
 @interface CHBaseEntity : NSManagedObject
 
-@property (nonatomic) int64_t identifier;
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) NSDate *changedAt;
 

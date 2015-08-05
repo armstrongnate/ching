@@ -25,7 +25,6 @@ describe(@"EnvelopesViewController", ^{
     	CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:context];
     	envelope.name = @"Groceries";
     	envelope.budget = [[NSDecimalNumber alloc] initWithDouble:100.0];
-    	envelope.identifier = 1;
 	});
 
 	__block EnvelopesViewController *_vc;

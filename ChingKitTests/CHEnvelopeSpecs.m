@@ -29,24 +29,6 @@ describe(@"CHEnvelope", ^{
 		expect(envelope).toNot.beNil();
 	});
 
-	it(@"has required fields", ^{
-		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:context];
-		envelope.budget = [[NSDecimalNumber alloc] initWithDouble:100.0];
-		envelope.createdAt = [NSDate new];
-		envelope.identifier = 1;
-
-		// no name, expect an error
-		NSError *error = nil;
-		[context save:&error];
-		expect(error).notTo.beNil();
-
-		// set name, no error
-		envelope.name = @"Groceries";
-		error = nil;
-		[context save:&error];
-		expect(error).to.beNil();
-	});
-
 	it(@"can conveniently set budget with double", ^{
 		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:context];
 		[envelope setBudgetWithDouble:100.0];
