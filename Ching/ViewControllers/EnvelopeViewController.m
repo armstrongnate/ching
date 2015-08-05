@@ -32,6 +32,10 @@
 	_envelope = envelope;
 	[self nameCell].textField.text = [self.envelope name];
 	[self budgetCell].textField.text = [NSNumberFormatter localizedStringFromNumber:[self.envelope budget] numberStyle:NSNumberFormatterDecimalStyle];
+	if ([envelope isNewRecord])
+	{
+		[self budgetCell].textField.text = @"";
+	}
 }
 
 - (SingleInputTableViewCell *)nameCell

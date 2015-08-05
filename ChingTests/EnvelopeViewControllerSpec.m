@@ -42,11 +42,13 @@ describe(@"EnvelopeViewController", ^{
 	it(@"should have a name field", ^{
 		expect([_vc nameCell]).to.beInstanceOf([SingleInputTableViewCell class]);
 		expect([_vc nameCell].placeholder).to.equal(@"Groceries, Rent, Entertainment");
+		expect([_vc nameCell].textField.text).to.equal(@"");
 	});
 
 	it(@"should have a budget field", ^{
 		expect([_vc budgetCell]).to.beInstanceOf([BudgetInputTableViewCell class]);
 		expect([_vc budgetCell].placeholder).to.equal(@"100.00");
+		expect([_vc budgetCell].textField.text).to.equal(@"");
 	});
 
 	it(@"should only allow numbers in budget field", ^{
@@ -64,6 +66,7 @@ describe(@"EnvelopeViewController", ^{
 	it(@"should set budget value given an envelope", ^{
 		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:_specHelper.persistenceController.managedObjectContext];
 		[envelope setBudgetWithDouble:100.0];
+		envelope.createdAt = [NSDate date];
 		_vc.envelope = envelope;
 		expect([_vc budgetCell].textField.text).to.equal(@"100");
 	});
