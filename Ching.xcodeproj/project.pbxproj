@@ -21,6 +21,7 @@
 		4326C0EF1B715CB9008BB699 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */; };
 		434A77701B6D2A6E00E20313 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		434A77711B6D2A6E00E20313 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
+		4358DA1C1B719714007C6A65 /* BudgetInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */; };
 		4393E19E1B6EDCF2002AADB3 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		4393E19F1B6EDCF2002AADB3 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
 		4393E1A31B6EDF2B002AADB3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4393E1A21B6EDF2B002AADB3 /* CoreDataTableViewController.m */; };
@@ -111,6 +112,8 @@
 		4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Colors.m"; path = "Helpers/UIColor+Colors.m"; sourceTree = "<group>"; };
 		434A77661B6D279000E20313 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		434A776B1B6D293D00E20313 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
+		4358DA1A1B719714007C6A65 /* BudgetInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BudgetInputTableViewCell.h; path = Views/BudgetInputTableViewCell.h; sourceTree = "<group>"; };
+		4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BudgetInputTableViewCell.m; path = Views/BudgetInputTableViewCell.m; sourceTree = "<group>"; };
 		4393E1A11B6EDF2B002AADB3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ViewControllers/CoreDataTableViewController.h; sourceTree = "<group>"; };
 		4393E1A21B6EDF2B002AADB3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ViewControllers/CoreDataTableViewController.m; sourceTree = "<group>"; };
 		4393E1A61B6EEA70002AADB3 /* CHPersistenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPersistenceController.h; sourceTree = "<group>"; };
@@ -361,6 +364,8 @@
 			children = (
 				43CDAB6C1B706D1800E72E11 /* SingleInputTableViewCell.h */,
 				43CDAB6D1B706D1800E72E11 /* SingleInputTableViewCell.m */,
+				4358DA1A1B719714007C6A65 /* BudgetInputTableViewCell.h */,
+				4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -594,6 +599,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F039AE1B6ED88700936556 /* EnvelopesViewController.m in Sources */,
+				4358DA1C1B719714007C6A65 /* BudgetInputTableViewCell.m in Sources */,
 				43CDAB6E1B706D1800E72E11 /* SingleInputTableViewCell.m in Sources */,
 				4318BE421B6C6D3200BE3B31 /* AppDelegate.m in Sources */,
 				4393E1A31B6EDF2B002AADB3 /* CoreDataTableViewController.m in Sources */,

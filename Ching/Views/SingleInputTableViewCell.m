@@ -26,6 +26,8 @@ static CGFloat const LabelSpacing = 10;
 {
 	[super awakeFromNib];
 	self.textField.placeholder = self.placeholder;
+	self.textField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:self.placeholder
+																		   attributes:@{ NSFontAttributeName : [UIFont italicSystemFontOfSize:FontSize] }];
 	self.labelView.text = self.label;
 }
 

@@ -62,8 +62,6 @@
         <!--Envelope View Controller-->
         <scene sceneID="LCe-d9-Jfg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eGm-nZ-s2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="sz3-qA-Qb3" userLabel="Exit" sceneMemberID="exit"/>
                 <tableViewController storyboardIdentifier="EnvelopeViewController" id="eBj-ds-c7m" customClass="EnvelopeViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="nMJ-ej-ldA">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -78,11 +76,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Groceries"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Groceries, Rent, Entertainment"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="label" value="Name:"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Z2k-oA-moc" customClass="SingleInputTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Z2k-oA-moc" customClass="BudgetInputTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z2k-oA-moc" id="n59-mV-sX1">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -108,6 +106,8 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eGm-nZ-s2m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sz3-qA-Qb3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3203" y="-18"/>
         </scene>
@@ -143,7 +143,6 @@
         <!--Navigation Controller-->
         <scene sceneID="fjf-jl-6qe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8q3-w2-Ye8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cmu-TL-XcO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fjk-IJ-RdH">
@@ -155,6 +154,7 @@
                         <segue destination="eBj-ds-c7m" kind="relationship" relationship="rootViewController" id="iI6-qe-Vh2"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8q3-w2-Ye8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2391" y="-18"/>
         </scene>
