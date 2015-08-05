@@ -14,4 +14,8 @@
 @property (nonatomic, strong) NSDate *createdAt;
 @property (nonatomic, strong) NSDate *changedAt;
 
++ (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
+
+- (BOOL)isNewRecord;
+
 @end

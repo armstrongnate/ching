@@ -22,6 +22,7 @@
 		434A77701B6D2A6E00E20313 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		434A77711B6D2A6E00E20313 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
 		4358DA1C1B719714007C6A65 /* BudgetInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */; };
+		4358DA1E1B719B6A007C6A65 /* CHBaseEntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358DA1D1B719B6A007C6A65 /* CHBaseEntitySpec.m */; };
 		4393E19E1B6EDCF2002AADB3 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		4393E19F1B6EDCF2002AADB3 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
 		4393E1A31B6EDF2B002AADB3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4393E1A21B6EDF2B002AADB3 /* CoreDataTableViewController.m */; };
@@ -114,6 +115,7 @@
 		434A776B1B6D293D00E20313 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
 		4358DA1A1B719714007C6A65 /* BudgetInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BudgetInputTableViewCell.h; path = Views/BudgetInputTableViewCell.h; sourceTree = "<group>"; };
 		4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BudgetInputTableViewCell.m; path = Views/BudgetInputTableViewCell.m; sourceTree = "<group>"; };
+		4358DA1D1B719B6A007C6A65 /* CHBaseEntitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBaseEntitySpec.m; sourceTree = "<group>"; };
 		4393E1A11B6EDF2B002AADB3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ViewControllers/CoreDataTableViewController.h; sourceTree = "<group>"; };
 		4393E1A21B6EDF2B002AADB3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ViewControllers/CoreDataTableViewController.m; sourceTree = "<group>"; };
 		4393E1A61B6EEA70002AADB3 /* CHPersistenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPersistenceController.h; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			children = (
 				4318BE781B6C6D8100BE3B31 /* Supporting Files */,
 				43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */,
+				4358DA1D1B719B6A007C6A65 /* CHBaseEntitySpec.m */,
 			);
 			path = ChingKitTests;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43A057831B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m in Sources */,
+				4358DA1E1B719B6A007C6A65 /* CHBaseEntitySpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
