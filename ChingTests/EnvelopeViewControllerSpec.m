@@ -14,6 +14,7 @@
 
 #import "EnvelopeViewController.h"
 #import "SingleInputTableViewCell.h"
+#import "BudgetInputTableViewCell.h"
 #import "CHEnvelope.h"
 #import "SpecHelper.h"
 
@@ -40,11 +41,11 @@ describe(@"EnvelopeViewController", ^{
 
 	it(@"should have a name field", ^{
 		expect([_vc nameCell]).to.beInstanceOf([SingleInputTableViewCell class]);
-		expect([_vc nameCell].placeholder).to.equal(@"Groceries");
+		expect([_vc nameCell].placeholder).to.equal(@"Groceries, Rent, Entertainment");
 	});
 
 	it(@"should have a budget field", ^{
-		expect([_vc budgetCell]).to.beInstanceOf([SingleInputTableViewCell class]);
+		expect([_vc budgetCell]).to.beInstanceOf([BudgetInputTableViewCell class]);
 		expect([_vc budgetCell].placeholder).to.equal(@"100.00");
 	});
 
