@@ -70,6 +70,23 @@ describe(@"EnvelopeViewController", ^{
 		_vc.envelope = envelope;
 		expect([_vc budgetCell].textField.text).to.equal(@"100");
 	});
+
+	it(@"should have a cancel button", ^{
+		UIBarButtonItem *leftBarButtonItem = [_vc navigationItem].leftBarButtonItem;
+		expect(leftBarButtonItem).toNot.beNil();
+	});
+
+	it(@"should wire up cancel action", ^{
+		UIBarButtonItem *button = [_vc navigationItem].leftBarButtonItem;
+		expect(NSStringFromSelector(button.action)).to.equal(@"cancelButtonTapped:");
+	});
+
+	it(@"should unwind when cancel tapped", ^{
+		UIBarButtonItem *cancelButton = [_vc navigationItem].leftBarButtonItem;
+		id vcMock = [OCMockObject partialMockForObject:_vc];
+		[_vc cancelButtonTapped:cancelButton];
+		[[vcMock verify] performSegueWithIdentifier:@"unwindFromEnvelopeForm:" sender:cancelButton];
+	});
 });
 
 SpecEnd

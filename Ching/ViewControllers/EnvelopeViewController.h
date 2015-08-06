@@ -18,5 +18,6 @@
 
 - (SingleInputTableViewCell *)nameCell;
 - (SingleInputTableViewCell *)budgetCell;
+- (IBAction)cancelButtonTapped:(id)sender;
 
 @end

@@ -48,4 +48,9 @@
 	return (SingleInputTableViewCell *)[self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
 }
 
+- (IBAction)cancelButtonTapped:(id)sender
+{
+	[self performSegueWithIdentifier:@"unwindFromEnvelopeForm:" sender:sender];
+}
+
 @end
