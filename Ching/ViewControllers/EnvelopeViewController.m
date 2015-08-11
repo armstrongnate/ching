@@ -53,4 +53,15 @@
 	[self performSegueWithIdentifier:@"unwindFromEnvelopeForm:" sender:sender];
 }
 
+- (IBAction)saveButtonTapped:(id)sender
+{
+	self.envelope.name = [self nameCell].textField.text;
+	self.envelope.budget = [NSDecimalNumber decimalNumberWithString:[self budgetCell].textField.text];
+	NSError *error;
+	if ([self.context save:&error])
+	{
+    	[self performSegueWithIdentifier:@"unwindFromEnvelopeForm:" sender:sender];
+	}
+}
+
 @end

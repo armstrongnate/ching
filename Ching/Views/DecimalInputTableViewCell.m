@@ -6,16 +6,16 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
-#import "BudgetInputTableViewCell.h"
+#import "DecimalInputTableViewCell.h"
 #import "CHNumberTextFieldDelegate.h"
 
-@interface BudgetInputTableViewCell ()
+@interface DecimalInputTableViewCell ()
 
 @property (nonatomic, strong) CHNumberTextFieldDelegate *numberDelegate;
 
 @end
 
-@implementation BudgetInputTableViewCell
+@implementation DecimalInputTableViewCell
 
 - (void)dealloc
 {

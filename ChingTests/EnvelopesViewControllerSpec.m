@@ -14,6 +14,7 @@
 
 #import "EnvelopesViewController.h"
 #import "EnvelopeViewController.h"
+#import "TransactionsViewController.h"
 
 SpecBegin(EnvelopesViewControllerSpec)
 
@@ -80,6 +81,22 @@ describe(@"EnvelopesViewController", ^{
 		expect(evc.envelope).notTo.beNil();
 		expect(evc.envelope.name).to.beNil();
 		expect(evc.envelope.budget).to.equal(0);
+	});
+
+	it(@"should prepare for segue when envelope row tapped", ^{
+		id envelopesMock = [OCMockObject partialMockForObject:_vc];
+		[envelopesMock tableView:_vc.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+		[[envelopesMock verify] performSegueWithIdentifier:@"showEnvelope:" sender:[NSIndexPath indexPathForRow:0 inSection:0]];
+	});
+
+	it(@"should prepare for showEnvelope: segue", ^{
+		TransactionsViewController *transactions = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TransactionsViewController"];
+		UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:transactions];
+		UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"showEnvelope:" source:_vc destination:nav];
+		[_vc prepareForSegue:segue sender:[NSIndexPath indexPathForRow:0 inSection:0]];
+		expect(transactions.envelope).notTo.beNil();
+		expect(transactions.fetchedResultsController).notTo.beNil();
+		expect(transactions.title).to.equal(@"Groceries");
 	});
 
 });

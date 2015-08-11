@@ -9,9 +9,18 @@
         <attribute name="changedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="createdAt" attributeType="Date" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CHTransaction" inverseName="envelope" inverseEntity="CHTransaction" syncable="YES"/>
+    </entity>
+    <entity name="CHTransaction" representedClassName="CHTransaction" syncable="YES">
+        <attribute name="amount" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="changedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="createdAt" attributeType="Date" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="envelope" maxCount="1" deletionRule="Nullify" destinationEntity="CHEnvelope" inverseName="transactions" inverseEntity="CHEnvelope" syncable="YES"/>
     </entity>
     <elements>
         <element name="CHBaseEntity" positionX="-63" positionY="18" width="128" height="75"/>
-        <element name="CHEnvelope" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="CHEnvelope" positionX="-171" positionY="138" width="128" height="118"/>
+        <element name="CHTransaction" positionX="45" positionY="138" width="128" height="118"/>
     </elements>
 </model>

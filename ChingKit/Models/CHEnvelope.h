@@ -16,9 +16,6 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSDecimalNumber *budget;
 
-+ (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
-+ (NSString *)entityName;
-
 - (void)setBudgetWithDouble:(double)budget;
 
 @end

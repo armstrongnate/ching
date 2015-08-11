@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Nate Armstrong. All rights reserved.
 //
 
+@import ObjectiveC;
+
 #import "CHBaseEntity.h"
 
 @implementation CHBaseEntity

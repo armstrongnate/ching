@@ -8,7 +8,7 @@
 
 #import "SingleInputTableViewCell.h"
 
-@interface BudgetInputTableViewCell : SingleInputTableViewCell
+@interface DecimalInputTableViewCell : SingleInputTableViewCell
 
 @end
 

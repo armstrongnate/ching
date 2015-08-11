@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430997901B77E6B100B7927B /* TransactionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4309978F1B77E6B100B7927B /* TransactionsViewController.m */; };
+		430997921B7948C000B7927B /* CHTransactionSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 430997911B7948C000B7927B /* CHTransactionSpecs.m */; };
+		4314CEC61B798D0D004E99DD /* TransactionViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 4314CEC51B798D0D004E99DD /* TransactionViewControllerSpecs.m */; };
+		4314CEC91B798D81004E99DD /* TransactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4314CEC81B798D81004E99DD /* TransactionViewController.m */; };
 		4318BE3F1B6C6D3200BE3B31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4318BE3E1B6C6D3200BE3B31 /* main.m */; };
 		4318BE421B6C6D3200BE3B31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4318BE411B6C6D3200BE3B31 /* AppDelegate.m */; };
 		4318BE481B6C6D3200BE3B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4318BE461B6C6D3200BE3B31 /* Main.storyboard */; };
@@ -21,7 +25,7 @@
 		4326C0EF1B715CB9008BB699 /* UIColor+Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */; };
 		434A77701B6D2A6E00E20313 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		434A77711B6D2A6E00E20313 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
-		4358DA1C1B719714007C6A65 /* BudgetInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */; };
+		4358DA1C1B719714007C6A65 /* DecimalInputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358DA1B1B719714007C6A65 /* DecimalInputTableViewCell.m */; };
 		4358DA1E1B719B6A007C6A65 /* CHBaseEntitySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 4358DA1D1B719B6A007C6A65 /* CHBaseEntitySpec.m */; };
 		4393E19E1B6EDCF2002AADB3 /* Expecta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A776B1B6D293D00E20313 /* Expecta.framework */; };
 		4393E19F1B6EDCF2002AADB3 /* Specta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434A77661B6D279000E20313 /* Specta.framework */; };
@@ -37,7 +41,7 @@
 		4393E1C71B6FC735002AADB3 /* CHEnvelope.h in Headers */ = {isa = PBXBuildFile; fileRef = 4393E1C51B6FC735002AADB3 /* CHEnvelope.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4393E1C81B6FC735002AADB3 /* CHEnvelope.m in Sources */ = {isa = PBXBuildFile; fileRef = 4393E1C61B6FC735002AADB3 /* CHEnvelope.m */; };
 		43A057831B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */; };
-		43B996531B71BBB1003363E9 /* CHNumberTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegate.m */; };
+		43B996531B71BBB1003363E9 /* CHNumberTextFieldDelegateSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegateSpecs.m */; };
 		43B996561B71BCD8003363E9 /* CHNumberTextFieldDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 43B996541B71BCD8003363E9 /* CHNumberTextFieldDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43B996571B71BCD8003363E9 /* CHNumberTextFieldDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B996551B71BCD8003363E9 /* CHNumberTextFieldDelegate.m */; };
 		43CDAB691B7061A900E72E11 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CDAB5E1B7061A900E72E11 /* libOCMock.a */; };
@@ -47,6 +51,12 @@
 		43CDAB741B7110B900E72E11 /* EnvelopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43CDAB731B7110B900E72E11 /* EnvelopeViewController.m */; };
 		43F039AB1B6ED70300936556 /* EnvelopesViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */; };
 		43F039AE1B6ED88700936556 /* EnvelopesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F039AD1B6ED88700936556 /* EnvelopesViewController.m */; };
+		43F8CD2F1B795777007B4B17 /* TransactionsViewControllerSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F8CD2E1B795777007B4B17 /* TransactionsViewControllerSpecs.m */; };
+		43F8CD321B795D3D007B4B17 /* CHTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F8CD301B795D3D007B4B17 /* CHTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43F8CD331B795D3D007B4B17 /* CHTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F8CD311B795D3D007B4B17 /* CHTransaction.m */; };
+		43F8CD361B796E18007B4B17 /* NSDate+Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F8CD341B796E18007B4B17 /* NSDate+Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43F8CD371B796E18007B4B17 /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F8CD351B796E18007B4B17 /* NSDate+Helper.m */; };
+		43F8CD391B796EC6007B4B17 /* NSDateHelperSpecs.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F8CD381B796EC6007B4B17 /* NSDateHelperSpecs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +105,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4309978E1B77E6B100B7927B /* TransactionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionsViewController.h; path = ViewControllers/TransactionsViewController.h; sourceTree = "<group>"; };
+		4309978F1B77E6B100B7927B /* TransactionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionsViewController.m; path = ViewControllers/TransactionsViewController.m; sourceTree = "<group>"; };
+		430997911B7948C000B7927B /* CHTransactionSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTransactionSpecs.m; sourceTree = "<group>"; };
+		4314CEC51B798D0D004E99DD /* TransactionViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionViewControllerSpecs.m; sourceTree = "<group>"; };
+		4314CEC71B798D81004E99DD /* TransactionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransactionViewController.h; path = ViewControllers/TransactionViewController.h; sourceTree = "<group>"; };
+		4314CEC81B798D81004E99DD /* TransactionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransactionViewController.m; path = ViewControllers/TransactionViewController.m; sourceTree = "<group>"; };
 		4318BE391B6C6D3200BE3B31 /* Ching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4318BE3D1B6C6D3200BE3B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4318BE3E1B6C6D3200BE3B31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -117,8 +133,8 @@
 		432A33F21B72621D00FE4B1A /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		434A77661B6D279000E20313 /* Specta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Specta.framework; path = Carthage/Build/iOS/Specta.framework; sourceTree = "<group>"; };
 		434A776B1B6D293D00E20313 /* Expecta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Expecta.framework; path = Carthage/Build/iOS/Expecta.framework; sourceTree = "<group>"; };
-		4358DA1A1B719714007C6A65 /* BudgetInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BudgetInputTableViewCell.h; path = Views/BudgetInputTableViewCell.h; sourceTree = "<group>"; };
-		4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BudgetInputTableViewCell.m; path = Views/BudgetInputTableViewCell.m; sourceTree = "<group>"; };
+		4358DA1A1B719714007C6A65 /* DecimalInputTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DecimalInputTableViewCell.h; path = Views/DecimalInputTableViewCell.h; sourceTree = "<group>"; };
+		4358DA1B1B719714007C6A65 /* DecimalInputTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DecimalInputTableViewCell.m; path = Views/DecimalInputTableViewCell.m; sourceTree = "<group>"; };
 		4358DA1D1B719B6A007C6A65 /* CHBaseEntitySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHBaseEntitySpec.m; sourceTree = "<group>"; };
 		4393E1A11B6EDF2B002AADB3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = ViewControllers/CoreDataTableViewController.h; sourceTree = "<group>"; };
 		4393E1A21B6EDF2B002AADB3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = ViewControllers/CoreDataTableViewController.m; sourceTree = "<group>"; };
@@ -132,7 +148,7 @@
 		4393E1C51B6FC735002AADB3 /* CHEnvelope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHEnvelope.h; path = Models/CHEnvelope.h; sourceTree = "<group>"; };
 		4393E1C61B6FC735002AADB3 /* CHEnvelope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHEnvelope.m; path = Models/CHEnvelope.m; sourceTree = "<group>"; };
 		43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHEnvelopeSpecs.m; sourceTree = "<group>"; };
-		43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNumberTextFieldDelegate.m; sourceTree = "<group>"; };
+		43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegateSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHNumberTextFieldDelegateSpecs.m; sourceTree = "<group>"; };
 		43B996541B71BCD8003363E9 /* CHNumberTextFieldDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHNumberTextFieldDelegate.h; path = Helpers/CHNumberTextFieldDelegate.h; sourceTree = "<group>"; };
 		43B996551B71BCD8003363E9 /* CHNumberTextFieldDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHNumberTextFieldDelegate.m; path = Helpers/CHNumberTextFieldDelegate.m; sourceTree = "<group>"; };
 		43CDAB5E1B7061A900E72E11 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOCMock.a; path = Vendor/OCMock/libOCMock.a; sourceTree = "<group>"; };
@@ -153,6 +169,12 @@
 		43F039AA1B6ED70300936556 /* EnvelopesViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnvelopesViewControllerSpec.m; sourceTree = "<group>"; };
 		43F039AC1B6ED88700936556 /* EnvelopesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnvelopesViewController.h; path = ViewControllers/EnvelopesViewController.h; sourceTree = "<group>"; };
 		43F039AD1B6ED88700936556 /* EnvelopesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnvelopesViewController.m; path = ViewControllers/EnvelopesViewController.m; sourceTree = "<group>"; };
+		43F8CD2E1B795777007B4B17 /* TransactionsViewControllerSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransactionsViewControllerSpecs.m; sourceTree = "<group>"; };
+		43F8CD301B795D3D007B4B17 /* CHTransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHTransaction.h; path = Models/CHTransaction.h; sourceTree = "<group>"; };
+		43F8CD311B795D3D007B4B17 /* CHTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHTransaction.m; path = Models/CHTransaction.m; sourceTree = "<group>"; };
+		43F8CD341B796E18007B4B17 /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Helper.h"; path = "Helpers/NSDate+Helper.h"; sourceTree = "<group>"; };
+		43F8CD351B796E18007B4B17 /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Helper.m"; path = "Helpers/NSDate+Helper.m"; sourceTree = "<group>"; };
+		43F8CD381B796EC6007B4B17 /* NSDateHelperSpecs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateHelperSpecs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,8 +274,10 @@
 				43CDAB701B71105B00E72E11 /* EnvelopeViewControllerSpec.m */,
 				4326C0E41B711A38008BB699 /* SpecHelper.h */,
 				4326C0E51B711A38008BB699 /* SpecHelper.m */,
-				43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegate.m */,
+				43B996521B71BBB1003363E9 /* CHNumberTextFieldDelegateSpecs.m */,
 				4318BE561B6C6D3200BE3B31 /* Supporting Files */,
+				43F8CD2E1B795777007B4B17 /* TransactionsViewControllerSpecs.m */,
+				4314CEC51B798D0D004E99DD /* TransactionViewControllerSpecs.m */,
 			);
 			path = ChingTests;
 			sourceTree = "<group>";
@@ -293,6 +317,8 @@
 				4318BE781B6C6D8100BE3B31 /* Supporting Files */,
 				43A057821B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m */,
 				4358DA1D1B719B6A007C6A65 /* CHBaseEntitySpec.m */,
+				430997911B7948C000B7927B /* CHTransactionSpecs.m */,
+				43F8CD381B796EC6007B4B17 /* NSDateHelperSpecs.m */,
 			);
 			path = ChingKitTests;
 			sourceTree = "<group>";
@@ -312,6 +338,8 @@
 				4326C0ED1B715CB9008BB699 /* UIColor+Colors.m */,
 				43B996541B71BCD8003363E9 /* CHNumberTextFieldDelegate.h */,
 				43B996551B71BCD8003363E9 /* CHNumberTextFieldDelegate.m */,
+				43F8CD341B796E18007B4B17 /* NSDate+Helper.h */,
+				43F8CD351B796E18007B4B17 /* NSDate+Helper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -319,6 +347,8 @@
 		4393E1B81B6FC276002AADB3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				43F8CD301B795D3D007B4B17 /* CHTransaction.h */,
+				43F8CD311B795D3D007B4B17 /* CHTransaction.m */,
 				4393E1B91B6FC68E002AADB3 /* CHBaseEntity.h */,
 				4393E1BA1B6FC68E002AADB3 /* CHBaseEntity.m */,
 				4393E1C51B6FC735002AADB3 /* CHEnvelope.h */,
@@ -378,8 +408,8 @@
 			children = (
 				43CDAB6C1B706D1800E72E11 /* SingleInputTableViewCell.h */,
 				43CDAB6D1B706D1800E72E11 /* SingleInputTableViewCell.m */,
-				4358DA1A1B719714007C6A65 /* BudgetInputTableViewCell.h */,
-				4358DA1B1B719714007C6A65 /* BudgetInputTableViewCell.m */,
+				4358DA1A1B719714007C6A65 /* DecimalInputTableViewCell.h */,
+				4358DA1B1B719714007C6A65 /* DecimalInputTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -393,6 +423,10 @@
 				43F039AD1B6ED88700936556 /* EnvelopesViewController.m */,
 				43CDAB721B7110B900E72E11 /* EnvelopeViewController.h */,
 				43CDAB731B7110B900E72E11 /* EnvelopeViewController.m */,
+				4309978E1B77E6B100B7927B /* TransactionsViewController.h */,
+				4309978F1B77E6B100B7927B /* TransactionsViewController.m */,
+				4314CEC71B798D81004E99DD /* TransactionViewController.h */,
+				4314CEC81B798D81004E99DD /* TransactionViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -407,9 +441,11 @@
 				4326C0EE1B715CB9008BB699 /* UIColor+Colors.h in Headers */,
 				4393E1A81B6EEA70002AADB3 /* CHPersistenceController.h in Headers */,
 				4393E1BB1B6FC68E002AADB3 /* CHBaseEntity.h in Headers */,
+				43F8CD361B796E18007B4B17 /* NSDate+Helper.h in Headers */,
 				4393E1AC1B6EEB22002AADB3 /* CHInMemoryPersistenceController.h in Headers */,
 				43B996561B71BCD8003363E9 /* CHNumberTextFieldDelegate.h in Headers */,
 				4318BE6C1B6C6D8100BE3B31 /* ChingKit.h in Headers */,
+				43F8CD321B795D3D007B4B17 /* CHTransaction.h in Headers */,
 				4393E1C71B6FC735002AADB3 /* CHEnvelope.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,12 +650,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				43F039AE1B6ED88700936556 /* EnvelopesViewController.m in Sources */,
-				4358DA1C1B719714007C6A65 /* BudgetInputTableViewCell.m in Sources */,
+				4358DA1C1B719714007C6A65 /* DecimalInputTableViewCell.m in Sources */,
 				43CDAB6E1B706D1800E72E11 /* SingleInputTableViewCell.m in Sources */,
 				4318BE421B6C6D3200BE3B31 /* AppDelegate.m in Sources */,
 				4393E1A31B6EDF2B002AADB3 /* CoreDataTableViewController.m in Sources */,
 				43CDAB741B7110B900E72E11 /* EnvelopeViewController.m in Sources */,
 				4318BE3F1B6C6D3200BE3B31 /* main.m in Sources */,
+				430997901B77E6B100B7927B /* TransactionsViewController.m in Sources */,
+				4314CEC91B798D81004E99DD /* TransactionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,9 +665,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4314CEC61B798D0D004E99DD /* TransactionViewControllerSpecs.m in Sources */,
 				43F039AB1B6ED70300936556 /* EnvelopesViewControllerSpec.m in Sources */,
-				43B996531B71BBB1003363E9 /* CHNumberTextFieldDelegate.m in Sources */,
+				43B996531B71BBB1003363E9 /* CHNumberTextFieldDelegateSpecs.m in Sources */,
 				43CDAB711B71105B00E72E11 /* EnvelopeViewControllerSpec.m in Sources */,
+				43F8CD2F1B795777007B4B17 /* TransactionsViewControllerSpecs.m in Sources */,
 				4326C0E61B711A38008BB699 /* SpecHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -641,9 +681,11 @@
 				43B996571B71BCD8003363E9 /* CHNumberTextFieldDelegate.m in Sources */,
 				4393E1BC1B6FC68E002AADB3 /* CHBaseEntity.m in Sources */,
 				4326C0EF1B715CB9008BB699 /* UIColor+Colors.m in Sources */,
+				43F8CD331B795D3D007B4B17 /* CHTransaction.m in Sources */,
 				4393E1AD1B6EEB22002AADB3 /* CHInMemoryPersistenceController.m in Sources */,
 				4393E1A91B6EEA70002AADB3 /* CHPersistenceController.m in Sources */,
 				4393E1B11B6FC1CF002AADB3 /* DataModel.xcdatamodeld in Sources */,
+				43F8CD371B796E18007B4B17 /* NSDate+Helper.m in Sources */,
 				4393E1C81B6FC735002AADB3 /* CHEnvelope.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -652,8 +694,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430997921B7948C000B7927B /* CHTransactionSpecs.m in Sources */,
 				43A057831B6FFF4E00BC03E7 /* CHEnvelopeSpecs.m in Sources */,
 				4358DA1E1B719B6A007C6A65 /* CHBaseEntitySpec.m in Sources */,
+				43F8CD391B796EC6007B4B17 /* NSDateHelperSpecs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

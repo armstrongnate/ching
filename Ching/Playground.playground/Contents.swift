@@ -13,3 +13,9 @@ formatter.locale = NSLocale.currentLocale()
 formatter.currencySymbol = ""
 
 formatter.stringFromNumber(num)
+
+NSDate(timeIntervalSinceNow: -(60 * 60 * 24 * 32))
+
+let df = NSDateFormatter()
+df.dateFormat = "yyyy-MM-dd"
+df.dateFromString("2015-08-10")

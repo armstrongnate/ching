@@ -10,9 +10,15 @@
 
 #import "CHInMemoryPersistenceController.h"
 #import "CHPersistenceController.h"
+
+// Models
 #import "CHBaseEntity.h"
 #import "CHEnvelope.h"
+#import "CHTransaction.h"
+
+// Helpers
 #import "UIColor+Colors.h"
+#import "NSDate+Helper.h"
 #import "CHNumberTextFieldDelegate.h"
 
 //! Project version number for ChingKit.

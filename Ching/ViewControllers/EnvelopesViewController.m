@@ -10,6 +10,7 @@
 
 #import "EnvelopesViewController.h"
 #import "EnvelopeViewController.h"
+#import "TransactionsViewController.h"
 
 @interface EnvelopesViewController ()
 {
@@ -22,6 +23,7 @@
 
 - (void)viewDidLoad
 {
+	[super viewDidLoad];
 	collapseDetailViewController = true;
 	self.splitViewController.delegate = self;
 }
@@ -59,15 +61,25 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-	if ([segue.identifier isEqualToString:@"newEnvelope"])
+	if ([segue.identifier isEqualToString:@"newEnvelope"] || [segue.identifier isEqualToString:@"showEnvelope:"])
 	{
 		NSManagedObjectContext *childContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
 		childContext.parentContext = self.context;
-		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:childContext];
-		EnvelopeViewController *envelopeViewController = (EnvelopeViewController *)[segue.destinationViewController topViewController];
-		envelopeViewController.envelope = envelope;
-		envelopeViewController.context = childContext;
-		envelopeViewController.title = @"New Envelope";
+		CHEnvelope *envelope;
+		if ([segue.identifier isEqualToString:@"newEnvelope"])
+		{
+    		envelope = [CHEnvelope insertNewObjectInContext:childContext];
+    		EnvelopeViewController *envelopeViewController = (EnvelopeViewController *)[segue.destinationViewController topViewController];
+    		envelopeViewController.envelope = envelope;
+    		envelopeViewController.context = childContext;
+    		envelopeViewController.title = @"New Envelope";
+		}
+		else if ([segue.identifier isEqualToString:@"showEnvelope:"] && [sender isKindOfClass:[NSIndexPath class]])
+		{
+			envelope = [self.fetchedResultsController objectAtIndexPath:(NSIndexPath *)sender];
+			TransactionsViewController *transactions = (TransactionsViewController *)[segue.destinationViewController topViewController];
+			transactions.envelope = envelope;
+		}
 	}
 }
 
@@ -86,6 +98,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	collapseDetailViewController = false;
+	[self performSegueWithIdentifier:@"showEnvelope:" sender:indexPath];
 }
 
 #pragma mark - UISplitViewControllerDelegate

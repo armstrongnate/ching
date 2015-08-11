@@ -14,7 +14,7 @@
 
 #import "EnvelopeViewController.h"
 #import "SingleInputTableViewCell.h"
-#import "BudgetInputTableViewCell.h"
+#import "DecimalInputTableViewCell.h"
 #import "CHEnvelope.h"
 #import "SpecHelper.h"
 
@@ -27,6 +27,7 @@ describe(@"EnvelopeViewController", ^{
 	});
 	__block EnvelopeViewController *_vc;
 	beforeEach(^{
+		[_specHelper.persistenceController.managedObjectContext reset];
 		UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 		_vc = [storyboard instantiateViewControllerWithIdentifier:@"EnvelopeViewController"];
 		expect(_vc.tableView).toNot.beNil();
@@ -46,7 +47,7 @@ describe(@"EnvelopeViewController", ^{
 	});
 
 	it(@"should have a budget field", ^{
-		expect([_vc budgetCell]).to.beInstanceOf([BudgetInputTableViewCell class]);
+		expect([_vc budgetCell]).to.beInstanceOf([DecimalInputTableViewCell class]);
 		expect([_vc budgetCell].placeholder).to.equal(@"100.00");
 		expect([_vc budgetCell].textField.text).to.equal(@"");
 	});
@@ -87,6 +88,43 @@ describe(@"EnvelopeViewController", ^{
 		[_vc cancelButtonTapped:cancelButton];
 		[[vcMock verify] performSegueWithIdentifier:@"unwindFromEnvelopeForm:" sender:cancelButton];
 	});
+
+	it(@"should have a save button", ^{
+		expect(_vc.saveButton).toNot.beNil();
+	});
+
+	it(@"should wire up save action", ^{
+		expect(NSStringFromSelector(_vc.saveButton.action)).to.equal(@"saveButtonTapped:");
+	});
+
+	it(@"should set envelope name on save", ^{
+		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:_specHelper.persistenceController.managedObjectContext];
+		_vc.envelope = envelope;
+		[_vc nameCell].textField.text = @"Groceries";
+		[_vc saveButtonTapped:_vc.saveButton];
+		expect(_vc.envelope.name).to.equal(@"Groceries");
+	});
+
+	it(@"should set envelope budget on save", ^{
+		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:_specHelper.persistenceController.managedObjectContext];
+		_vc.envelope = envelope;
+		[_vc budgetCell].textField.text = @"100.25";
+		[_vc saveButtonTapped:_vc.saveButton];
+		expect(_vc.envelope.budget).to.equal(100.25);
+	});
+
+	it(@"should unwind on save", ^{
+		id vcMock = [OCMockObject partialMockForObject:_vc];
+		NSManagedObjectContext *context = _specHelper.persistenceController.managedObjectContext;
+		_vc.context = context;
+		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:context];
+		_vc.envelope = envelope;
+		[_vc nameCell].textField.text = @"Groceries";
+		[_vc budgetCell].textField.text = @"100.25";
+		[_vc saveButtonTapped:_vc.saveButton];
+		[[vcMock verify] performSegueWithIdentifier:@"unwindFromEnvelopeForm:" sender:_vc.saveButton];
+	});
+
 });
 
 SpecEnd

@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSDate *changedAt;
 
 + (instancetype)insertNewObjectInContext:(NSManagedObjectContext *)context;
++ (NSString *)entityName;
 
 - (BOOL)isNewRecord;
 
