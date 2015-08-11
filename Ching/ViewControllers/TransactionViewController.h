@@ -17,4 +17,6 @@
 @property (nonatomic, strong) IBOutlet SingleInputTableViewCell *amountCell;
 @property (nonatomic, strong) IBOutlet SingleInputTableViewCell *titleCell;
 
+- (IBAction)saveButtonTapped:(id)sender;
+
 @end

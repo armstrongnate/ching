@@ -10,6 +10,8 @@
 
 @interface TransactionViewController ()
 
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
 @end
 
 @implementation TransactionViewController
@@ -25,6 +27,23 @@
 {
 	[super viewDidAppear:animated];
 	[self.amountCell.textField becomeFirstResponder];
+}
+
+- (IBAction)saveButtonTapped:(id)sender
+{
+	self.transaction.title = self.titleCell.textField.text;
+	self.transaction.amount = [NSDecimalNumber decimalNumberWithString:self.amountCell.textField.text];
+	NSError *error;
+	if ([self.context save:&error])
+	{
+		[self performSegueWithIdentifier:@"unwindFromTransactionForm:" sender:sender];
+	}
+}
+
+- (void)setTransaction:(CHTransaction *)transaction
+{
+	_transaction = transaction;
+	self.context = transaction.managedObjectContext;
 }
 
 @end

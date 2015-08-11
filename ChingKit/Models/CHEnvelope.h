@@ -10,6 +10,7 @@
 @import CoreData;
 
 #import "CHBaseEntity.h"
+#import "CHTransaction.h"
 
 @interface CHEnvelope : CHBaseEntity
 

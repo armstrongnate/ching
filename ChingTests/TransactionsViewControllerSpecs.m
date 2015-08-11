@@ -109,6 +109,30 @@ describe(@"TransactionsViewController", ^{
 		[_controller prepareForSegue:segue sender:_controller.addButton];
 		expect(tvc.transaction).toNot.beNil();
 	});
+
+	it(@"should assign envelope in unwind segue", ^{
+		NSManagedObjectContext *context = _helper.persistenceController.managedObjectContext;
+		CHEnvelope *envelope = [CHEnvelope insertNewObjectInContext:context];
+		envelope.name = @"Groceries";
+		envelope.budget = [NSDecimalNumber decimalNumberWithString:@"100.0"];
+		NSError *error;
+		[context save:&error];
+		_controller.envelope = envelope;
+		NSManagedObjectContext *childContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+		childContext.parentContext = context;
+		CHTransaction *transaction = [CHTransaction insertNewObjectInContext:childContext];
+		TransactionViewController *tvc = [[TransactionViewController alloc] init];
+		tvc.transaction = transaction;
+		transaction.title = @"Harmons";
+		transaction.amount = [NSDecimalNumber decimalNumberWithString:@"100.0"];
+		[childContext save:&error];
+		expect(error).to.beNil();
+		UIStoryboardSegue *unwindSegue = [[UIStoryboardSegue alloc] initWithIdentifier:@"unwindFromEnvelopeForm:" source:tvc destination:_controller];
+		expect([envelope mutableSetValueForKey:@"transactions"]).to.haveACountOf(0);
+		[_controller unwindFromTransactionForm:unwindSegue];
+		expect([envelope mutableSetValueForKey:@"transactions"]).to.haveACountOf(1);
+		expect(((CHTransaction *)[[[envelope mutableSetValueForKey:@"transactions"] allObjects] lastObject]).title).to.equal(@"Harmons");
+	});
 	
 });
 

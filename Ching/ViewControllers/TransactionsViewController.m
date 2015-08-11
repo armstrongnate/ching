@@ -53,6 +53,12 @@
 - (IBAction)unwindFromTransactionForm:(UIStoryboardSegue *)segue
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
+	TransactionViewController *source = (TransactionViewController *)segue.sourceViewController;
+	if (![source.transaction isNewRecord] && source.transaction.envelope == nil)
+	{
+		[[self.envelope mutableSetValueForKey:@"transactions"] addObject:[self.envelope.managedObjectContext objectWithID:[source.transaction objectID]]];
+		[self.tableView reloadData];
+	}
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -64,6 +70,17 @@
 		childContext.parentContext = self.envelope.managedObjectContext;
 		tvc.transaction = [CHTransaction insertNewObjectInContext:childContext];
 	}
+}
+
+#pragma mark - UITableViewDataSource
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Transaction"];
+	CHTransaction *transaction = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	cell.textLabel.text = transaction.title;
+	cell.detailTextLabel.text = [transaction.amount stringValue];
+	return cell;
 }
 
 @end

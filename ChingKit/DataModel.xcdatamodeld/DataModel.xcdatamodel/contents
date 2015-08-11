@@ -16,11 +16,11 @@
         <attribute name="changedAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="createdAt" attributeType="Date" syncable="YES"/>
         <attribute name="title" attributeType="String" syncable="YES"/>
-        <relationship name="envelope" maxCount="1" deletionRule="Nullify" destinationEntity="CHEnvelope" inverseName="transactions" inverseEntity="CHEnvelope" syncable="YES"/>
+        <relationship name="envelope" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CHEnvelope" inverseName="transactions" inverseEntity="CHEnvelope" syncable="YES"/>
     </entity>
     <elements>
         <element name="CHBaseEntity" positionX="-63" positionY="18" width="128" height="75"/>
         <element name="CHEnvelope" positionX="-171" positionY="138" width="128" height="118"/>
-        <element name="CHTransaction" positionX="45" positionY="138" width="128" height="118"/>
+        <element name="CHTransaction" positionX="45" positionY="138" width="128" height="120"/>
     </elements>
 </model>

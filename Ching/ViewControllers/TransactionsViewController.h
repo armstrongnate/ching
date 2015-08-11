@@ -16,5 +16,6 @@
 @property (nonatomic, strong) IBOutlet UIBarButtonItem *addButton;
 
 - (IBAction)addTransactionButtonTapped:(id)sender;
+- (IBAction)unwindFromTransactionForm:(UIStoryboardSegue *)segue;
 
 @end
